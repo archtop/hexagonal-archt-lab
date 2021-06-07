@@ -58,7 +58,98 @@ creep in and make the software ***Increasingly Harder to Change Over Time***
 > **Only once ..., should ...** : 只有一旦 ... 才能 ... 
 
 5. The use of Object-Relational Mapping (ORM) with a layered architecture makes
-   us easily be tempted to ~~mix business rules with persistence aspects~~
+   us easily be tempted to _**mix business rules with persistence aspects**_ 
 
 > Don’t get me wrong (不要誤會我), I love ORM, and I’m working with JPA and 
 > Hibernate on a daily basis
+
+| ![Use ORM Entities in Domain Layer](images/ORM_used_in_Domain_Layer.png) |
+| --- |
+
+   - The Domain layer is allowed to access those entities in Persistence Layer 
+   - If it’s allowed to use them, they will be used and this creates a strong 
+     coupling between the Persistence Layer, and the Domain Layer
+   - The reality is, the services _**use the persistence model as their 
+     business model**_ and **_not only_** have to **_deal with the domain logic_**, 
+     but also with persistence tasks like
+       - eager vs. lazy loading,
+       - database transactions
+       - flushing caches
+       - similar housekeeping
+   - The persistence code is virtually fused into the domain code and thus it’s 
+     hard to change one without the other
+       - That’s the opposite of being _**flexible**_ and _**keeping options open**_, 
+         which should be the goal of our architecture
+
+### It's Prone ot Shortcut
+
+1.  What is a Shortcut? (Or, Shortcut for What?)
+    - The global rule of conventional layered architecture 
+        > conventional: following what is traditional, or the way something has been done for a long time
+        
+        > The Role: From a certain layer, we can only access components in the same layer, or a layer below.
+    
+    - If we need access to a certain component in a layer above ours, we can 
+      just push the component down a layer, and we’re allowed to access it
+      Problem Solved
+
+2.  Why the Shortcut is bad?
+    - Doing the Shortcut once may be OK
+    - However, doing it once opens the door for doing it a second time
+    - If someone else was allowed to do it, so am I?
+    - If there is an option to do something, someone will do it, especially in 
+      combination with a looming deadline
+    - if something has been done before, the threshold for someone to do it 
+      again will lower drastically
+      > It's the “Broken Windows Theory”
+    - Over years of development and maintenance of a software project, 
+      the persistence layer may very well end up like this: 
+
+| ![The Shortcuts](images/Shortcuts.png) |
+| --- |
+
+3.  The persistence layer (the bottom-most layer) will grow fat as we push 
+    components down through the layers
+      - Perfect candidates for this are helper or utility components
+
+4.  If we want to disable the “shortcut mode” for our architecture, layers are 
+    not the best option
+      - At least not without enforcing some kind of additional architecture rules 
+      - “Enforce” does not mean doing code reviews but rules that make the build 
+        fail when they’re broken
+
+
+### It Grows Hard to Test (Another Shortcut)
+
+| ![The Shortcuts](images/Skipping_Layer.png) |
+| --- |
+
+1.  Layers are being Skipped
+    - For example, accessing persistence layer from web layer
+
+2.  This feels OK the first couple of times, but it has _**Two Drawbacks**_ if it
+    often happens, and it will, once someone has done the first step 
+    - **First**, we’re implementing domain logic in the web layer, even if it’s 
+      only doing very simple persistence process
+      - If the use case expands in the future, m***ore domain logic will be added 
+        to the web layer*** 
+        - _**Mixing responsibilities**_
+        - _**Spreading essential domain logic all over the application**_ 
+    - **Second**, in the tests of our web layer, we not only have to mock away 
+      the domain layer, but also the persistence layer
+      - This adds complexity to the unit test
+      - A complex test setup is the first step towards _**no tests**_ at all 
+        because we _**have no time**_ for them
+
+3.  As the web component grows over time, it may accumulate a lot of 
+    dependencies to different persistence components,  
+    - Adding to the test’s complexity
+    - Taking more time for us to understand and mock away the dependencies 
+      than to actually write test code 
+
+
+### It Hides the Use Cases
+
+1.  Layered Architecture makes finding the right spot to add new functionalities 
+    very hard, why?
+    
