@@ -4,8 +4,9 @@
   - The customer’s explicit requirements
   - The hidden requirement of maintainability
   - My own requirements concerning structure and aesthetics
-      - aesthetics /esˈθetɪk/ : the qualities and ideas in a work of art or 
-        literature that relate to beauty and the nature of art
+
+> aesthetics /esˈθetɪk/ : the qualities and ideas in a work of art or literature 
+> that relate to beauty and the nature of art
 
 ## The requirements are not easy to be fulfilled, because
   - My software projects usually don’t go as planned
