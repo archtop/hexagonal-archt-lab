@@ -1,4 +1,4 @@
-# Inverting Dependencies
+# Inverting Dependencies - The Overview of Hexagonal Architecture
 
 ## The Single Responsibility Principle - SRP
 
