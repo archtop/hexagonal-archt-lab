@@ -64,3 +64,17 @@
       core and called by the adapter
     - For ___Driven-Adapters___, an interface that is implemented by the adapter 
     and called by the core
+
+
+## Summary
+
+- By inverting the dependencies
+    - The domain code has no dependencies to the outside 
+    - The domain logic is decoupled from all Persistence and UI specific problems 
+    - Reduce the number of reasons to change throughout the codebase
+    - Fewer reasons to change means better maintainability
+
+- The domain code is free to be modelled as best fits the business problems 
+
+- The persistence and UI code are free to be modelled as best fits the 
+  persistence and UI problems 

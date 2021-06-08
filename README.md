@@ -6,7 +6,7 @@
 
 ## [What's Wrong with Layers? ](notes/03_What_is_Wrong_with_Layers.md)
 
-## [The Overview of Hexagonal Architecture](notes/Inverting_Dependencies.md)
+## [The Overview of Hexagonal Architecture](notes/The_Overview_of_Hexagonal_Architecture.md)
 
 
 ----
