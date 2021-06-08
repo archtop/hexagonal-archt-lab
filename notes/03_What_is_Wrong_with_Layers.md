@@ -1,4 +1,4 @@
-# What's Wrong with Layers
+`# What's Wrong with Layers
 --------------------------------------------------------------------------------
 
 | ![Three Layers Architecture](images/3_Layers_Archt.png "Three Layers") |
@@ -35,7 +35,7 @@
 > creep in and make the software ***Increasingly Harder to Change Over Time***
 
 
-### Layered-Architecture Promotes Database-Driven Design
+## Layered-Architecture Promotes Database-Driven Design
 
 1. ***WHAT*** we’re trying ***TO ACHIEVE*** with almost any application we’re 
    building
@@ -93,7 +93,7 @@
         which should be the goal of our architecture
 
 
-### It's Prone ot Shortcut
+## It's Prone ot Shortcut
 
 1. What is a Shortcut? (Or, Shortcut for What?)
      - The global rule of conventional layered architecture 
@@ -134,7 +134,7 @@
         fail when they’re broken
 
 
-### It Grows Hard to Test (Another Shortcut)
+## It Grows Hard to Test (Another Shortcut)
 
 | ![The Shortcuts](images/Skipping_Layer.png) |
 | --- |
@@ -165,8 +165,32 @@
        than to actually write test code 
 
 
-### It Hides the Use Cases
+## Layered Architecture Hides the Use Cases
 
-1. Layered Architecture makes finding the right spot to add new functionalities 
-   very hard, why?
-    
+### Very hard to find the right spot to add new functionalities  
+
+### We devs spending much more time changing existing code than creating new 
+
+### The good architecture should help us to quickly navigate the codebase 
+
+### Layered architecture
+- Scatters the domain logic throughout the layers
+- Has many ___broad services___, and each of them serves multiple use cases 
+    - Many dependencies to the persistence layer
+    - Many components in the web layer depend on them
+
+### A highly-specialized narrow domain service only serve a single use case 
+
+
+## Layered Architecture Makes Parallel Work Difficult
+
+### Layered Architecture makes Parallel-Working very difficult
+- Everything builds on top of the persistence layer 
+- The persistence layer must be developed first 
+- Then comes the domain layer 
+- Finally, the web layer 
+- ___Only one developer can work on the feature at the same time___ 
+
+### DDD makes working against interfaces possible
+
+### ___Broad Services___ make Parallel-Working much more difficult
