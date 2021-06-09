@@ -10,13 +10,11 @@
     <artifactId>hexagonal-archt-lab</artifactId>
     <version>2021.01-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>hexagonal-archt-lab</name>
+    <name>hexagonal-architecture-lab</name>
     <description>The Lab of Hexagonal-Architecture</description>
 
-    <!-- 
     <modules>
-        <module>mssc-beer-service</module>
+        <module>buckpal</module>
     </modules>
-    -->
-    
+
 </project>
