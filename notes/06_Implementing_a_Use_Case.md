@@ -184,6 +184,10 @@ public class SendMoneyService implements SendMoneyUseCase {
 > Query Service 
 
 ``` 
+public interface GetAccountBalanceQuery {
+	Money getAccountBalance(AccountId accountId);
+}
+
 @RequiredArgsConstructor
 class GetAccountBalanceService implements GetAccountBalanceQuery {
 

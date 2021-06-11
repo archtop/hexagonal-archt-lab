@@ -15,6 +15,8 @@
 
 ## [Implementing a Use Case](notes/06_Implementing_a_Use_Case.md)
 
+## [Implementing a Web Adapter](notes/7_Implementing_a_Web_Adapter.md)
+
 ----
 
 ## Resources
