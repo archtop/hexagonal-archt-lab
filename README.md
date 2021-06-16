@@ -17,6 +17,8 @@
 
 ## [Implementing a Web Adapter](notes/7_Implementing_a_Web_Adapter.md)
 
+## [Implementing a Persistence Adapter](notes/8_Implementing_a_Persistence_Adapter.md)
+
 ----
 
 ## Resources
