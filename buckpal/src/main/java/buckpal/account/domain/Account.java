@@ -37,12 +37,14 @@ public class Account {
      * This was the balance of the account before the first activity in the
      * activityWindow
      */
-    @Getter private final Money baselineBalance;
+    @Getter
+    private final Money baselineBalance;
 
     /**
      * The window of latest activities on this account
      */
-    @Getter private final ActivityWindow activityWindow;
+    @Getter
+    private final ActivityWindow activityWindow;
 
     /**
      * Creates an {@link Account} entity without an ID
@@ -127,6 +129,5 @@ public class Account {
     public static class AccountId {
         private Long value;
     }
-
 
 }///:~
