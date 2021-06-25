@@ -19,6 +19,10 @@
 
 ## [Implementing a Persistence Adapter](notes/8_Implementing_a_Persistence_Adapter.md)
 
+## [Testing Architecture Elements](notes/9_Testing_Architecture_Elements.md)
+
+## [Mapping Between Boundaries](notes/10_Mapping_Between_Boundaries.md)
+
 ----
 
 ## Resources
