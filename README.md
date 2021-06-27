@@ -23,6 +23,8 @@
 
 ## [Mapping Between Boundaries](notes/10_Mapping_Between_Boundaries.md)
 
+## [Assembling_the_Application](notes/11_Assembling_the_Application.md)
+
 ----
 
 ## Resources
