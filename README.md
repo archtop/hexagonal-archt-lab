@@ -23,9 +23,11 @@
 
 ## [Mapping Between Boundaries](notes/10_Mapping_Between_Boundaries.md)
 
-## [Assembling_the_Application](notes/11_Assembling_the_Application.md)
+## [Assembling the Application](notes/11_Assembling_the_Application.md)
 
-## [Enforcing_Architecture_Boundaries](notes/12_Enforcing_Architecture_Boundaries.md)
+## [Enforcing Architecture Boundaries](notes/12_Enforcing_Architecture_Boundaries.md)
+
+## [Deciding on an Architecture Style](notes/14_Deciding_on_an_Architecture_Style.md)
 
 ----
 
