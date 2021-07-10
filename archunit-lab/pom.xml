@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.yulikexuan</groupId>
+        <artifactId>core-java-bom</artifactId>
+        <version>2021.01-SNAPSHOT</version>
+        <relativePath />
+    </parent>
+
+    <groupId>com.yulikexuan.archtop</groupId>
+    <artifactId>archunit-lab</artifactId>
+    <packaging>jar</packaging>
+    <name>archunit-lab</name>
+    <description>The Lab of ArchUnit with JUnit5</description>
+
+    <properties>
+        <spring-context.version>5.3.8</spring-context.version>
+        <archunit-junit5.version>0.19.0</archunit-junit5.version>
+    </properties>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${spring-context.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.tngtech.archunit</groupId>
+            <artifactId>archunit-junit5</artifactId>
+            <version>${archunit-junit5.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
+
+</project>

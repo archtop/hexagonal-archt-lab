@@ -25,6 +25,8 @@
 
 ## [Assembling_the_Application](notes/11_Assembling_the_Application.md)
 
+## [Enforcing_Architecture_Boundaries](notes/12_Enforcing_Architecture_Boundaries.md)
+
 ----
 
 ## Resources

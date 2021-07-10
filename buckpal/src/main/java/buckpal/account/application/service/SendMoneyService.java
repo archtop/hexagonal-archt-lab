@@ -17,7 +17,7 @@ import javax.transaction.Transactional;
 @UseCase
 @Transactional
 @RequiredArgsConstructor
-public class SendMoneyService implements SendMoneyUseCase {
+class SendMoneyService implements SendMoneyUseCase {
 
     private final AccountLock accountLock;
 
@@ -30,6 +30,8 @@ public class SendMoneyService implements SendMoneyUseCase {
         // TODO: Validate business rules
         // TODO: Manipulate model state
         // TODO: Return output
+
+
 
         return false;
     }

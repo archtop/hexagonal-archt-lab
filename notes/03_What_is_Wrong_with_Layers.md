@@ -22,8 +22,8 @@
 
 - Add new features without affecting existing features
 
-- ___Keep options open___ and are ___able to quickly adapt to___ changing requirements and 
-  external factors
+- ___Keep options open___ and are ___able to quickly adapt to___ changing 
+  requirements and external factors
 
 > **keep/leave your options open**: to avoid making a decision now so that you 
 > still have a choice in the future
@@ -100,10 +100,10 @@
      - If we need access to a certain component in a layer above ours, we can 
        just push the component down a layer, and we’re allowed to access it, 
        and problem Solved
-        > conventional: following what is traditional, or the way something has been
-        > done for a long time
-        > The Role: From a certain layer, we can only access components in the same
-        > layer, or a layer below.
+        - conventional: following what is traditional, or the way something has been
+          done for a long time
+        - The Role: From a certain layer, we can only access components in the same
+          layer, or a layer below.
 
 
 2. Why the Shortcut is bad?
