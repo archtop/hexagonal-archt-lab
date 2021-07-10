@@ -126,3 +126,85 @@
 
 
 ## Build Artifacts
+
+### Enforce the Dependencies and Boundaries between Modules and Layers
+### For each such Module or Layer, create a Separate Build Module 
+- with its own codebase and its own build artifact (JAR file) as a result 
+- In the build script of each module, specify only those dependencies to other 
+  modules that are allowed according to our architecture
+- Developers can no longer inadvertently create illegal dependencies 
+    - because the classes are not even available on the classpath
+
+| ![Build_Artifacts_for_Enforcing_Boundries](images/Build_Artifacts_for_Enforcing_Boundries.png "Build_Artifacts_for_Enforcing_Boundries") |
+| --- |
+
+### Multiple build modules for each Adapter
+
+### Do not use Domain Model as transfer objects within in/out ports
+
+### The Adapter Modules and the App Module may access the API Module
+- but not the other way around
+
+### The API Module does not have access to the Domain Model 
+
+### The API Module cannot use the Domain Model within the port interfaces
+
+### The Adapters have no access to the Domain Model and Services
+- they must go through the ports
+
+### One API Module contains only the Incoming Ports
+
+### One API Module contains only the Outgoing Ports
+
+### Incoming Adapters declare a dependency only to the Input Ports
+
+### Outgoing Adapters declare a dependency only to the Output Ports
+
+### The Domain Model doesn't access the Services Module
+
+### Allow different Services to use the same Domain Model 
+- by simply declaring a dependency to the domain build artifact
+
+### The Gist
+- #### The finer the modules, the stronger the Control
+- #### The finer the modules, the more mappings to do between those Modules
+
+### Advantages
+- #### Build tools don’t allow circular dependencies
+    - Circular Dependencies are BAD 
+        - A change in one module within the circle would potentially mean a 
+          change in all other modules within the circle which is a violation of 
+          the Single Responsibility Principle
+    - The Java compiler doesn’t care at all if there is a circular dependency 
+      between two or more packages
+- #### Build modules allow isolated code changes within certain modules 
+    - without having to take the other modules into consideration
+- #### Adding a new dependency becomes a conscious act instead of an accident 
+    - A developer who needs access to a certain class he currently cannot access 
+      will hopefully give some thought to the question if the dependency is 
+      really reasonable before adding it to the build-script
+
+### The Architecture should be somewhat Stable 
+- before splitting it into different build modules
+
+
+## How Does This Help Me Build Maintainable Software
+
+### Software architecture is basically all about Managing Dependencies 
+- between architecture elements
+
+### If the Dependencies become a Big Ball of Mud
+- the Architecture becomes a Big Ball of Mud
+
+### Continually make sure that dependencies point in the right direction 
+- to preserve the architecture over time 
+
+### Keep the package structure in mind and use PACKAGE-PRIVATE visibility 
+- when possible to avoid dependencies to classes that should not be accessed 
+  from outside the package
+
+### Use ArchUnit if Package Private Modifier doesn’t work
+
+### Extract Architecture Elements into their own Build Modules 
+- anytime the architecture is stable enough 
+- because this gives explicit control over the dependencies
