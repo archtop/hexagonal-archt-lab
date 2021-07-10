@@ -30,4 +30,9 @@
 ----
 
 ## Resources
-### [MD Cheatsheet](https://github.com/tchapi/markdown-cheatsheet/blob/master/README.md)
+- ### [MD Cheatsheet](https://github.com/tchapi/markdown-cheatsheet/blob/master/README.md)
+- ### [Introduction to ArchUnit](https://www.baeldung.com/java-archunit-intro)
+- ### [ArchUnit User Guide](https://www.archunit.org/userguide/html/000_Index.html)
+- ### [ArchUnit API](https://javadoc.io/doc/com.tngtech.archunit/archunit/latest/index.html)
+- ### [ArchUnit Maven plugin](https://github.com/societe-generale/arch-unit-maven-plugin)
+- ### [ArchUnit-Examples](https://github.com/TNG/ArchUnit-Examples)

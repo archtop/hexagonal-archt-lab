@@ -108,13 +108,21 @@
 - #### [ArchUnit-Examples](https://github.com/TNG/ArchUnit-Examples)
 
 ### To include ArchUnit’s JUnit 5 support
-- simply add the following dependency
+- Simply add the following dependency
 
 ``` 
 <dependency>
     <groupId>com.tngtech.archunit</groupId>
     <artifactId>archunit-junit5</artifactId>
-    <version>0.19.0</version>
+    <version>0.20.0</version>
     <scope>test</scope>
 </dependency>
 ```
+
+### Post-Compile Checks are Vulnerable
+- A single typo or, more importantly, a single refactoring renaming a package, 
+  can make the whole test useless
+- Post-compile checks always have to be maintained parallel to the codebase
+
+
+## Build Artifacts
