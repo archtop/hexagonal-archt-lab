@@ -16,6 +16,7 @@
     <groupId>com.yulikexuan.archtop</groupId>
     <artifactId>buckpal</artifactId>
     <packaging>jar</packaging>
+    <version>2021.03-SNAPSHOT</version>
     <name>buckpal</name>
     <description>Hexagonal-Architecture Implementation</description>
 

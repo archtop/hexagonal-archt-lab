@@ -8,14 +8,22 @@
 
     <groupId>com.yulikexuan.archtop</groupId>
     <artifactId>hexagonal-archt-lab</artifactId>
-    <version>2021.01-SNAPSHOT</version>
+    <version>2021.03-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>hexagonal-architecture-lab</name>
     <description>The Lab of Hexagonal-Architecture</description>
 
     <modules>
-        <module>archunit-lab</module>
-        <module>buckpal</module>
+<!--        <module>archunit-lab</module>-->
+<!--        <module>buckpal</module>-->
+        <module>common</module>
+        <module>domain</module>
+        <module>api-in</module>
+        <module>api-out</module>
+        <module>application</module>
+        <module>web-adapter</module>
+        <module>persistence-adapter</module>
+        <module>configuration</module>
     </modules>
 
 </project>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <parent>
+        <groupId>com.yulikexuan</groupId>
+        <artifactId>core-java-bom</artifactId>
+        <version>2021.01-SNAPSHOT</version>
+        <relativePath />
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>common</artifactId>
+    <version>2021.03-SNAPSHOT</version>
+
+    <properties>
+        <spring-context.version>5.3.8</spring-context.version>
+        <validation-api.version>2.0.1.Final</validation-api.version>
+    </properties>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>jakarta.annotation</groupId>
+            <artifactId>jakarta.annotation-api</artifactId>
+            <version>1.3.5</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${spring-context.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>${validation-api.version}</version>
+        </dependency>
+
+    </dependencies>
+
+</project>
