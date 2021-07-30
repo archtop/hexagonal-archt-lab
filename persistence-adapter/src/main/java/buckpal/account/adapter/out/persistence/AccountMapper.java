@@ -14,7 +14,7 @@ import java.util.List;
 
 
 @Mapper
-class AccountMapper {
+public class AccountMapper {
 
     Account mapToDomainEntity(
             AccountJpaEntity account,

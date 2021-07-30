@@ -4,7 +4,7 @@ module buckpal.common {
     requires transitive java.annotation;
     requires transitive lombok;
     requires transitive org.slf4j;
-    requires spring.core;
-    requires spring.beans;
-    requires spring.context;
+    requires transitive spring.core;
+    requires transitive spring.beans;
+    requires transitive spring.context;
 }

@@ -1,5 +1,7 @@
 # [Assembling the Application](https://github.com/archtop/hexagonal-archt-lab/blob/main/notes/11_Assembling_the_Application.md)
 
+- ### [Spring IoC & DI](../doc/notes/Spring_DI_Java_Config.md)
+
 ## Only Use Spring Boot Dependencies in Module 
   - ### ``` Configuration ```
 
@@ -86,3 +88,4 @@ module buckpal.account.adapter.in.web {
     requires buckpal.account.application.port.in;
 }
 ```
+

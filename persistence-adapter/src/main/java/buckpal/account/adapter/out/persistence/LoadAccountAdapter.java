@@ -7,15 +7,17 @@ import buckpal.account.application.port.out.LoadAccountPort;
 import buckpal.account.domain.Account;
 import buckpal.common.PersistenceAdapter;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
 import javax.persistence.EntityNotFoundException;
 import java.time.LocalDateTime;
 import java.util.List;
 
 
-@PersistenceAdapter
+@Slf4j
+@PersistenceAdapter("loadAccountPort")
 @RequiredArgsConstructor
-class LoadAccountAdapter implements LoadAccountPort {
+public class LoadAccountAdapter implements LoadAccountPort {
 
     private final AccountRepository accountRepository;
     private final ActivityRepository activityRepository;
